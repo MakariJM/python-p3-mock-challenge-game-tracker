@@ -37,3 +37,7 @@ class Player:
         self._username = username
         self._results = []
         self._games_played = []
+
+    @property
+    def username(self):
+        return self._username
