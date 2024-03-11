@@ -58,3 +58,6 @@ class Player:
             if new_game not in self._games_played:
                 self._games_played.append(new_game)
         return self._games_played
+    
+    def played_game(self, game):
+        return game in self._games_played
