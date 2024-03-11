@@ -29,4 +29,11 @@ class Game:
 
     def average_score(self, player):
         player_scores = [result.score for result in self._results if result.player == player]
-        return sum(player_scores) / len(player_scores) if player_scores else 0   
+        return sum(player_scores) / len(player_scores) if player_scores else 0
+
+
+class Player:
+    def __init__(self, username):
+        self._username = username
+        self._results = []
+        self._games_played = []
