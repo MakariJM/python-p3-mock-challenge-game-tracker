@@ -91,3 +91,7 @@ class Result:
             self._score = score
         else:
             raise ValueError
+        
+    @property
+    def player(self):
+        return self._player
