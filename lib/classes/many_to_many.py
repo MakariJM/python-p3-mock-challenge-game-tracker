@@ -64,3 +64,11 @@ class Player:
     
     def num_times_played(self, game):
         return sum(1 for result in self._results if result.game == game)
+    
+class Result:
+    all = []
+
+    def __init__(self, player, game, score):
+        self.player = player
+        self.game = game
+        self.score = score
