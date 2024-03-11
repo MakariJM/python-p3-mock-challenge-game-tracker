@@ -6,4 +6,11 @@ class Game:
 
     @property
     def title(self):
-        return self._title    
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        if isinstance(title, str) and 1 <= len(title) <= 15:
+            self._title = title
+        else:
+            raise ValueError   
