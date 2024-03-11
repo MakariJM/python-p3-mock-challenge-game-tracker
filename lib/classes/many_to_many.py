@@ -80,3 +80,7 @@ class Result:
         game.players(player)
 
         Result.all.append(self)
+
+    @property
+    def score(self):
+        return self._score
