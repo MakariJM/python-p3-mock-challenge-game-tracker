@@ -95,3 +95,10 @@ class Result:
     @property
     def player(self):
         return self._player
+    
+    @player.setter
+    def player(self, player):
+        if isinstance(player, Player):
+            self._player = player
+        else:
+            raise ValueError
