@@ -102,3 +102,14 @@ class Result:
             self._player = player
         else:
             raise ValueError
+        
+    @property
+    def game(self):
+        return self._game
+
+    @game.setter
+    def game(self, game):
+        if isinstance(game, Game):
+            self._game = game
+        else:
+            raise ValueError
