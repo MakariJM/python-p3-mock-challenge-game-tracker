@@ -25,4 +25,8 @@ class Game:
         if new_player is not None and isinstance(new_player, Player):
             if new_player not in self._players:
                 self._players.append(new_player)
-        return self._players   
+        return self._players
+
+    def average_score(self, player):
+        player_scores = [result.score for result in self._results if result.player == player]
+        return sum(player_scores) / len(player_scores) if player_scores else 0   
