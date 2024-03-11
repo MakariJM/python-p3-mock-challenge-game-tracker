@@ -84,3 +84,10 @@ class Result:
     @property
     def score(self):
         return self._score
+    
+    @score.setter
+    def score(self, score):
+        if isinstance(score, int) and 1 <= score <= 5000 and not hasattr(self, 'score'):
+            self._score = score
+        else:
+            raise ValueError
