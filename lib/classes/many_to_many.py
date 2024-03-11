@@ -72,3 +72,9 @@ class Result:
         self.player = player
         self.game = game
         self.score = score
+
+        player.results(self)
+        player.games_played(game)
+
+        game.results(self)
+        game.players(player)
