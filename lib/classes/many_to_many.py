@@ -52,3 +52,9 @@ class Player:
             if new_result not in self._results:
                 self._results.append(new_result)
         return self._results
+    
+    def games_played(self, new_game=None):
+        if new_game is not None and isinstance(new_game, Game):
+            if new_game not in self._games_played:
+                self._games_played.append(new_game)
+        return self._games_played
