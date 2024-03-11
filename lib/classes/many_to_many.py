@@ -19,4 +19,10 @@ class Game:
         if new_result is not None and isinstance(new_result, Result):
             if new_result not in self._results:
                 self._results.append(new_result)
-        return self._results   
+        return self._results
+
+    def players(self, new_player=None):
+        if new_player is not None and isinstance(new_player, Player):
+            if new_player not in self._players:
+                self._players.append(new_player)
+        return self._players   
