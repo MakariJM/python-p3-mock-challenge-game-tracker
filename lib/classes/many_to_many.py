@@ -41,3 +41,8 @@ class Player:
     @property
     def username(self):
         return self._username
+    
+    @username.setter
+    def username(self, username):
+        if isinstance(username, str) and 2 <= len(username) <= 16:
+            self._username = username
