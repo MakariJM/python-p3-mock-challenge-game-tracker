@@ -46,3 +46,9 @@ class Player:
     def username(self, username):
         if isinstance(username, str) and 2 <= len(username) <= 16:
             self._username = username
+
+    def results(self, new_result=None):
+        if new_result is not None and isinstance(new_result, Result):
+            if new_result not in self._results:
+                self._results.append(new_result)
+        return self._results
