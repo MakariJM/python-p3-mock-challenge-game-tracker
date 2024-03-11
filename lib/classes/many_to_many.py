@@ -61,3 +61,6 @@ class Player:
     
     def played_game(self, game):
         return game in self._games_played
+    
+    def num_times_played(self, game):
+        return sum(1 for result in self._results if result.game == game)
