@@ -78,3 +78,5 @@ class Result:
 
         game.results(self)
         game.players(player)
+
+        Result.all.append(self)
